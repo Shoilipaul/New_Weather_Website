@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>🌤️ Weather App</h1>
+            <p>Get real-time weather information for any location</p>
+        </header>
+
+
+        <!-- Search Section -->
+        <section class="search-box">
+
+            <input
+                type="text"
+                id="locationInput"
+                placeholder="Enter city name (e.g. Kolkata)"
+            >
+
+            <button id="weatherButton">
+                🔍 Get Weather
+            </button>
+
+        </section>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading">
+            Loading weather data...
+        </div>
+
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error">
+        </div>
+
+
+        <!-- Weather Information -->
+        <section id="weatherSection" class="weather-section">
+
+            <!-- Main Weather -->
+            <div class="main-weather">
+
+                <div>
+                    <h2 id="cityName">Kolkata</h2>
+                    <p id="countryName">India</p>
+                </div>
+
+                <div class="temperature">
+                    <span id="temperature">--</span>°C
+                </div>
+
+                <p class="feels">
+                    Feels like
+                    <span id="feelsLike">--</span>°C
+                </p>
+
+            </div>
+
+
+            <!-- Weather Cards -->
+            <div class="weather-grid">
+
+                <!-- Humidity -->
+                <div class="weather-card">
+                    <span class="icon">💧</span>
+                    <h3>Humidity</h3>
+                    <p id="humidity">--</p>
+                    <small>%</small>
+                </div>
+
+
+                <!-- Rain -->
+                <div class="weather-card">
+                    <span class="icon">🌧️</span>
+                    <h3>Rain</h3>
+                    <p id="rain">--</p>
+                    <small>mm</small>
+                </div>
+
+
+                <!-- Snowfall -->
+                <div class="weather-card">
+                    <span class="icon">❄️</span>
+                    <h3>Snowfall</h3>
+                    <p id="snowfall">--</p>
+                    <small>cm</small>
+                </div>
+
+
+                <!-- Pressure -->
+                <div class="weather-card">
+                    <span class="icon">🎈</span>
+                    <h3>Sea Level Pressure</h3>
+                    <p id="pressure">--</p>
+                    <small>hPa</small>
+                </div>
+
+
+                <!-- Cloud Cover -->
+                <div class="weather-card">
+                    <span class="icon">☁️</span>
+                    <h3>Total Cloud Cover</h3>
+                    <p id="cloudTotal">--</p>
+                    <small>%</small>
+                </div>
+
+
+                <!-- Low Cloud -->
+                <div class="weather-card">
+                    <span class="icon">☁️</span>
+                    <h3>Low Cloud</h3>
+                    <p id="cloudLow">--</p>
+                    <small>%</small>
+                </div>
+
+
+                <!-- Mid Cloud -->
+                <div class="weather-card">
+                    <span class="icon">☁️</span>
+                    <h3>Mid Cloud</h3>
+                    <p id="cloudMid">--</p>
+                    <small>%</small>
+                </div>
+
+
+                <!-- High Cloud -->
+                <div class="weather-card">
+                    <span class="icon">☁️</span>
+                    <h3>High Cloud</h3>
+                    <p id="cloudHigh">--</p>
+                    <small>%</small>
+                </div>
+
+
+                <!-- Visibility -->
+                <div class="weather-card">
+                    <span class="icon">👁️</span>
+                    <h3>Visibility</h3>
+                    <p id="visibility">--</p>
+                    <small>km</small>
+                </div>
+
+
+                <!-- Wind Speed 10m -->
+                <div class="weather-card">
+                    <span class="icon">💨</span>
+                    <h3>Wind Speed 10m</h3>
+                    <p id="windSpeed10">--</p>
+                    <small>km/h</small>
+                </div>
+
+
+                <!-- Wind Direction 10m -->
+                <div class="weather-card">
+                    <span class="icon">🧭</span>
+                    <h3>Wind Direction 10m</h3>
+                    <p id="windDirection10">--</p>
+                    <small>°</small>
+                </div>
+
+
+                <!-- Wind Speed 180m -->
+                <div class="weather-card">
+                    <span class="icon">💨</span>
+                    <h3>Wind Speed 180m</h3>
+                    <p id="windSpeed180">--</p>
+                    <small>km/h</small>
+                </div>
+
+
+                <!-- Wind Direction 180m -->
+                <div class="weather-card">
+                    <span class="icon">🧭</span>
+                    <h3>Wind Direction 180m</h3>
+                    <p id="windDirection180">--</p>
+                    <small>°</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>Weather data provided by Open-Meteo</p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
