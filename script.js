@@ -4,7 +4,16 @@
 
 // We will put our real API Gateway URL here later.
 
-const API_URL = "https://01625q028d.execute-api.eu-north-1.amazonaws.com/WeatherData";
+const API_URL = "YOUR_API_GATEWAY_URL";
+
+fetch("https://01625q028d.execute-api.eu-north-1.amazonaws.com/WeatherData")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 
 
 // ==========================================
