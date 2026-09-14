@@ -4,7 +4,7 @@
 
 // We will put our real API Gateway URL here later.
 
-const API_URL = "YOUR_API_GATEWAY_URL";
+const API_URL = "https://01625q028d.execute-api.eu-north-1.amazonaws.com/WeatherData";
 
 
 // ==========================================
