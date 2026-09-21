@@ -1,24 +1,11 @@
-// ==========================================
+
 // AWS API Gateway URL
-// ==========================================
 
 // We will put our real API Gateway URL here later.
 
-const API_URL = "YOUR_API_GATEWAY_URL";
+const API_URL = "https://01625q028d.execute-api.eu-north-1.amazonaws.com/WeatherData";
 
-fetch("https://01625q028d.execute-api.eu-north-1.amazonaws.com/WeatherData")
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
-        console.error(error);
-    });
-
-
-// ==========================================
 // Get HTML elements
-// ==========================================
 
 const locationInput =
     document.getElementById("locationInput");
@@ -36,9 +23,7 @@ const weatherSection =
     document.getElementById("weatherSection");
 
 
-// ==========================================
 // Button Click
-// ==========================================
 
 weatherButton.addEventListener(
     "click",
@@ -62,9 +47,7 @@ locationInput.addEventListener(
 );
 
 
-// ==========================================
 // Main Weather Function
-// ==========================================
 
 async function getWeather() {
 
@@ -130,9 +113,7 @@ async function getWeather() {
         );
 
 
-        // ======================================
         // Check Lambda response
-        // ======================================
 
         let weatherData;
 
@@ -172,9 +153,7 @@ async function getWeather() {
         }
 
 
-        // ======================================
         // Display Weather
-        // ======================================
 
         displayWeather(
             weatherData
@@ -199,9 +178,7 @@ async function getWeather() {
 }
 
 
-// ==========================================
 // Display Weather
-// ==========================================
 
 function displayWeather(data) {
 
@@ -328,9 +305,6 @@ function displayWeather(data) {
 
     // Visibility
 
-    // Open-Meteo gives visibility in meters.
-    // Convert it to kilometers.
-
     const visibilityKm =
         weather.visibility != null
             ? weather.visibility / 1000
@@ -392,9 +366,7 @@ function displayWeather(data) {
 }
 
 
-// ==========================================
 // Format Values
-// ==========================================
 
 function formatValue(value) {
 
@@ -421,9 +393,7 @@ function formatValue(value) {
 }
 
 
-// ==========================================
 // Show Error
-// ==========================================
 
 function showError(message) {
 
