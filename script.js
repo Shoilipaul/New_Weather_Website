@@ -5,6 +5,20 @@
 
 const API_URL = "https://01625q028d.execute-api.eu-north-1.amazonaws.com/WeatherData";
 
+fetch(API_URL)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json(); 
+  })
+  .then(result => {
+    console.log("Weather Data:", result);
+  })
+  .catch(error => {
+    console.error("Fetch Error:", error);
+  });
+
 // Get HTML elements
 
 const locationInput =
